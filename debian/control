@@ -1,0 +1,28 @@
+Source: node-multimatch
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Sruthi Chandran <srud@disroot.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-array-differ <!nocheck>
+ , node-array-union <!nocheck>
+ , node-arrify <!nocheck>
+ , node-minimatch (>= 3.0.0) <!nocheck>
+ , node-tape <!nocheck>
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-multimatch
+Vcs-Git: https://salsa.debian.org/js-team/node-multimatch.git
+Homepage: https://github.com/sindresorhus/multimatch
+Rules-Requires-Root: no
+
+Package: node-multimatch
+Architecture: all
+Depends: ${misc:Depends}
+ , node-array-differ
+ , node-array-union
+ , node-arrify
+ , node-minimatch (>= 3.0.0)
+Description: Extends minimatch.match() with support for multiple patterns
+ Node.js is an event-based server-side JavaScript engine.
